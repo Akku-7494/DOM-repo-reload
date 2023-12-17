@@ -1,3 +1,4 @@
+// GETELEMENTBYID //
 // // Change the main heading to 'Fruit World'
 // var mainHeading = document.getElementById('main-heading');
 // mainHeading.textContent = 'Fruit World';
@@ -22,14 +23,23 @@
 // paragraph.textContent = 'Please visit us again';
 // thanksDiv.appendChild(paragraph);
 
+// GETELEMENTSBYCLASSNAME //
+// // Get the elements with the class name "fruit"
+// var fruitsList = document.getElementsByClassName("fruit");
 
-// Get the elements with the class name "fruit"
-var fruitsList = document.getElementsByClassName("fruit");
+// // Make the 3rd element (index 2) have a yellow background color
+// fruitsList[2].style.backgroundColor = "yellow";
 
-// Make the 3rd element (index 2) have a yellow background color
-fruitsList[2].style.backgroundColor = "yellow";
+// // Make all elements in the list have bold font
+// for (var i = 0; i < fruitsList.length; i++) {
+//   fruitsList[i].style.fontWeight = "bold";
+// }
 
-// Make all elements in the list have bold font
-for (var i = 0; i < fruitsList.length; i++) {
-  fruitsList[i].style.fontWeight = "bold";
-}
+
+// GETELEMENTSBYTAGNAME //
+var li=document.getElementsByTagName("li");
+li[4].style.color = "blue";
+for (var i = 0; i < li.length; i++){
+    li[i].style.fontStyle = 'italic';
+     }
+
