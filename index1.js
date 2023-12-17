@@ -36,10 +36,42 @@
 // }
 
 
-// GETELEMENTSBYTAGNAME //
-var li=document.getElementsByTagName("li");
-li[4].style.color = "blue";
-for (var i = 0; i < li.length; i++){
-    li[i].style.fontStyle = 'italic';
-     }
+// // GETELEMENTSBYTAGNAME //
+// var li=document.getElementsByTagName("li");
+// li[4].style.color = "blue";
+// for (var i = 0; i < li.length; i++){
+//     li[i].style.fontStyle = 'italic';
+//      }
 
+
+// QUERYSELECTOR & QUERYSELECTORALL //
+const mainH = document.querySelector('#main-heading'); 
+mainH.style.textAlign = 'right';
+const FBH = document.querySelector('#basket-heading');
+FBH.style.color = 'brown';
+
+const fruits = document.querySelector('.fruits');
+fruits.style.backgroundColor = 'gray';
+fruits.style.padding= '30px';
+fruits.style.margin = '30px';
+fruits.style.borderRadius ='5px'; 
+fruits.style.listStyleType ='none'
+
+// Get all the even "li" elements with class "fruit"
+var evenFruitItems = document.querySelectorAll('.fruits .fruit:nth-child(even)');
+
+// Change the background color to red and text color to white for even fruit items
+for (var i = 0; i < evenFruitItems.length; i++) {
+  evenFruitItems[i].style.backgroundColor = 'brown';
+  evenFruitItems[i].style.color = 'white';
+  evenFruitItems[i].style.borderRadius = '5px';
+}
+
+// Get all the odd "li" elements with class "fruit"
+var oddFruitItems = document.querySelectorAll('.fruits .fruit:nth-child(odd)');
+
+// Change the background color to red and text color to white for even fruit items
+for (var i = 0; i < oddFruitItems.length; i++) {
+  oddFruitItems[i].style.backgroundColor = 'white';
+  oddFruitItems[i].style.borderRadius = '5px';
+}
